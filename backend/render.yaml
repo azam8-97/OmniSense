@@ -1,0 +1,29 @@
+services:
+  - type: web
+    name: omnisense-backend
+    env: python
+    plan: free
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "python -m uvicorn app.main:app --host 0.0.0.0 --port 8000"
+    envVars:
+      - key: DATABASE_URL
+        scope: build
+        sync: false
+      - key: SMTP_HOST
+        scope: build
+        sync: false
+      - key: SMTP_PORT
+        scope: build
+        sync: false
+      - key: SMTP_USERNAME
+        scope: build
+        sync: false
+      - key: SMTP_PASSWORD
+        scope: build
+        sync: false
+      - key: SMTP_USE_TLS
+        scope: build
+        sync: false
+      - key: ALLOWED_ORIGIN
+        scope: build
+        sync: false

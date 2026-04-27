@@ -1,0 +1,13 @@
+# Frontend
+frontend/node_modules/
+frontend/dist/
+
+# Python
+backend/.venv/
+backend/__pycache__/
+backend/**/*.pyc
+backend/omnisense.db
+
+# Env files
+frontend/.env
+backend/.env
