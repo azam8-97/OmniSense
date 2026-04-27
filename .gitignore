@@ -1,13 +1,42 @@
 # Frontend
 frontend/node_modules/
 frontend/dist/
+frontend/.DS_Store
 
 # Python
 backend/.venv/
+backend/venv/
 backend/__pycache__/
 backend/**/*.pyc
-backend/omnisense.db
+backend/*.db
+backend/.DS_Store
 
-# Env files
+# Environment files (secrets)
 frontend/.env
+frontend/.env.local
 backend/.env
+backend/.env.local
+
+# OS files
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+
+# IDE
+.vscode/settings.json
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Cache
+*.cache
+.cache/
+.pytest_cache/
+
+# Build artifacts
+*.egg-info/
+.eggs/
+dist/
+build/
