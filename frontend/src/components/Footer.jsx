@@ -18,7 +18,7 @@ function Footer() {
           ))}
         </nav>
         <div>
-          <p>omnisense.pk | OmniSense@gmail.com | 03084450419</p>
+          <p>omnisense.pk | hello.omnisense@gmail.com | 03084450419</p>
           <p>Copyright © 2026 OmniSense. All rights reserved.</p>
         </div>
       </div>

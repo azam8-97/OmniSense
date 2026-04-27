@@ -15,11 +15,12 @@ function HowItWorksPage() {
           )}
 
           <ol className="steps">
-            <li>Central Node detects water rising on the street</li>
-            <li>Algorithm checks multiple sensors to confirm - no false alarms</li>
-            <li>Alert tier decided: Green to Yellow to Orange to Red</li>
-            <li>All Household Nodes on the street warned simultaneously in under 30 seconds</li>
-            <li>Residents act: move valuables at Yellow, evacuate at Red</li>
+            <li>Central Node detects water rising & validates using PIR motion sensor - avoids false alarms</li>
+            <li>Algorithm analyzes water depth and rising velocity through ultrasonic sensor</li>
+            <li>Alert tier calculated: Green (all clear) → Yellow → Orange → Red (evacuate)</li>
+            <li>Alert broadcast via LoRa 433 MHz - reaches Household Nodes in under 30 seconds</li>
+            <li>Mesh network extends coverage: each household node can relay to neighbors</li>
+            <li>Residents receive alert on display and audible alarm - they act immediately</li>
           </ol>
 
           <div className="tier-grid" role="list" aria-label="Alert tiers">
@@ -53,7 +54,7 @@ function HowItWorksPage() {
             </article>
             <article className="card">
               <h3>Rapid Broadcast</h3>
-              <p>WiFi-based alert delivery reaches all homes on the street in under 30 seconds.</p>
+              <p>LoRa 433 MHz mesh network reaches all homes on street in under 30 seconds - works offline without WiFi.</p>
             </article>
             <article className="card">
               <h3>Autonomous Operation</h3>
@@ -61,7 +62,7 @@ function HowItWorksPage() {
             </article>
             <article className="card">
               <h3>Multi-Hazard Sensing</h3>
-              <p>Detects flooding, fire (smoke), and gas leaks on residential streets.</p>
+              <p>Detects flooding (ultrasonic), fire (smoke sensor + temperature rise), gas/LPG leaks, and broadcasts emergency alerts via mesh network.</p>
             </article>
             <article className="card">
               <h3>Emergency Durability</h3>

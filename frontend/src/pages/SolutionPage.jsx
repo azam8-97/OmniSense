@@ -19,20 +19,30 @@ function SolutionPage() {
               <h3>Central Node (outdoor)</h3>
               <ul>
                 <li>Pole-mounted, IP65 weatherproof</li>
-                <li>Monitors water level, rate of rise, soil saturation, atmospheric pressure</li>
-                <li>Runs a weighted algorithm every 30 seconds</li>
+                <li>Ultrasonic water sensor, PIR motion detector, rain sensor</li>
+                <li>Monitors water depth, rising velocity, and confirms alerts with PIR logic</li>
+                <li>Powered by 2 Lithium-Ion cells - operates independently of grid</li>
+                <li>Algorithm processes every 30 seconds with risk classification (Green/Orange/Red)</li>
               </ul>
               <img src="/central-node.jpeg" alt="Central Node device" className="product-image" />
             </article>
             <article className="product-card">
               <h3>Household Node (indoor)</h3>
               <ul>
-                <li>Plugs directly into wall socket - no cables</li>
-                <li>RGB LED ring, 85dB buzzer, bilingual OLED display</li>
-                <li>Receives alert via WiFi and detects smoke, LPG, and CO</li>
+                <li>Plugs directly into wall socket with battery backup</li>
+                <li>RGB LED ring, 85dB buzzer, LCD display</li>
+                <li>Receives alerts via LoRa mesh network and local processing</li>
+                <li>Safety sensors: Smoke detector (MQ135), gas/LPG sensor, temperature/humidity (DHT11)</li>
+                <li>Fire detection via smoke OR sudden temperature rise detection</li>
+                <li>5-second SOS button for emergency mesh broadcast to nearby homes</li>
               </ul>
               <img src="/household-node.jpeg" alt="Household Node device" className="product-image" />
             </article>
+          </div>
+          <div className="blynk-integration" style={{textAlign: 'center', marginTop: '1rem'}}>
+            <h4>Integration Partners</h4>
+            <p>Remote monitoring and third-party dashboards supported via Blynk IoT.</p>
+            <img src="/blynk-iot.jpeg" alt="Blynk IoT logo" style={{maxWidth: '240px'}} />
           </div>
         </div>
       </section>

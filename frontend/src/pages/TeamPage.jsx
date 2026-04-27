@@ -18,6 +18,7 @@ function TeamPage() {
             {teams.map((member) => {
               let imgSrc = null;
               if (member.role.includes('CEO')) imgSrc = '/ceo.jpg';
+              else if (member.role.includes('CTO')) imgSrc = '/cto.jpeg';
               else if (member.role.includes('CPO')) imgSrc = '/cpo.jpeg';
               else if (member.role.includes('COO')) imgSrc = '/coo.jpeg';
               
@@ -30,7 +31,6 @@ function TeamPage() {
                   )}
                   <h3>{member.name}</h3>
                   <p className="team-role">{member.role}</p>
-                  <p>{member.scope}</p>
                 </article>
               );
             })}
