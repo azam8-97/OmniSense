@@ -16,23 +16,45 @@ export const stats = [
 
 export const pricingTiers = [
   {
-    title: 'Starter Street Kit',
-    price: 'Rs. 40,000',
-    details: '1 Central Node + 4 Household Nodes',
-    useCase: 'Small streets'
+    title: 'Starter Kit',
+    sku: 'OS-SK-01',
+    price: 'Rs. 24,999',
+    highlights: [
+      '1 Outdoor Flood Unit',
+      '1 Indoor Safety Unit',
+      'Pre-paired, ready in 15 min',
+      '12-month warranty',
+      'Blynk app setup guide'
+    ],
+    footer: 'First shared cost in a new network'
   },
   {
-    title: 'Standard Street Kit',
-    price: 'Rs. 65,000',
-    details: '1 Central Node + 8 Household Nodes',
-    useCase: 'Medium streets',
+    title: 'Indoor Node',
+    sku: 'OS-IN-01',
+    badge: 'Best Value',
+    price: 'Rs. 7,999',
+    highlights: [
+      '1 Indoor Safety Unit',
+      'Joins existing mesh via Ref ID',
+      'All gas, fire, SOS features',
+      'Gets alerts from outdoor unit',
+      'Blynk app access'
+    ],
+    footer: 'Subsequent household on the street',
     highlighted: true
   },
   {
-    title: 'Community Kit',
-    price: 'Rs. 120,000',
-    details: '2 Central Nodes + 15 Household Nodes',
-    useCase: 'Large communities / societies'
+    title: 'Premium Bundle',
+    sku: 'OS-PB-01',
+    price: 'Rs. 39,999',
+    highlights: [
+      '1 Outdoor Unit + 4 Indoor Units',
+      'Multi-floor coverage',
+      'Extended package',
+      'Rs. 4,998 saving vs separate',
+      'Custom sensors added to indoor and outdoor units'
+    ],
+    footer: 'Large communities & enterprise solutions'
   }
 ];
 

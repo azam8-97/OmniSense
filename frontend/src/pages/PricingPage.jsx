@@ -6,22 +6,26 @@ function PricingPage() {
     <main>
       <section id="pricing" className="section section-light">
         <div className="container">
-          <h2>Street-Kit Pricing. One Decision Covers the Whole Street.</h2>
+          <h2>Business Model</h2>
+          <p className="pricing-subtitle">Hardware sales + mesh network growth model</p>
           <div className="grid-3">
             {pricingTiers.map((tier) => (
               <article key={tier.title} className={`pricing-card ${tier.highlighted ? 'pricing-card--featured' : ''}`}>
-                <h3>{tier.title}</h3>
+                {tier.badge && <span className="pricing-badge">{tier.badge}</span>}
+                <div className="pricing-header">
+                  <h3>{tier.title}</h3>
+                  <span className="pricing-sku">{tier.sku}</span>
+                </div>
                 <p className="price">{tier.price}</p>
-                <p>{tier.details}</p>
-                <p>{tier.useCase}</p>
+                <ul className="pricing-list">
+                  {tier.highlights.map((item) => (
+                    <li key={item}>{item}</li>
+                  ))}
+                </ul>
+                <p className="pricing-footer">{tier.footer}</p>
               </article>
             ))}
           </div>
-          <p className="pricing-note">Additional Household Node - Rs. 5,000 per unit</p>
-          <p className="pricing-note">
-            NGO and government bulk orders (10+ kits): 15% discount. Pilot program for first
-            10 housing societies: 20% discount.
-          </p>
           <Link to="/contact" className="btn btn-primary">
             Get a Quote for Your Street
           </Link>
