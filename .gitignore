@@ -9,6 +9,7 @@ backend/venv/
 backend/__pycache__/
 backend/**/*.pyc
 backend/*.db
+backend/omnisense.db
 backend/.DS_Store
 
 # Environment files (secrets)
